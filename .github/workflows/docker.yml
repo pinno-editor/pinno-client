@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker build
-        run: docker run build -t web-video-editor
+        run: docker build -t web-video-editor
