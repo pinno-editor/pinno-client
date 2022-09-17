@@ -1,0 +1,19 @@
+name: Docker
+
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker build
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
