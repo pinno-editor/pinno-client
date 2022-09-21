@@ -1,0 +1,14 @@
+.video_item{
+    width: 310px;
+    height: 196px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 32px;
+    text-align: center;
+    color: black;
+    gap: 3;
+
+    img {
+        width: 100%;
+    }
+}
