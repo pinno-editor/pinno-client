@@ -1,0 +1,23 @@
+.video_loader {
+  width: 100%;
+  min-width: 384px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.drag_and_drop_area {
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 4rem;
+}
+
+.input {
+  display: none;
+}
