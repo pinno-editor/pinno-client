@@ -13,7 +13,11 @@ const VideoLoader = () => {
 
   const [fileName, setFileName] = useState("");
   const [loaderState, setLoaderState] = useState(VideoLoaderState.kUnloaded);
-  const onFileLoaded = (event: React.ChangeEvent) => {
+  const onFileLoaded = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (!event.target.files) {
+      return;
+    }
+
     const file = event.target.files[0];
     setFileName(file.name);
     setLoaderState(VideoLoaderState.kLoaded);
