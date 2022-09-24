@@ -5,7 +5,6 @@ import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import { VideoLoaderState } from "./VideoLoaderProps";
 import VideoLoaderUnloaded from "./VideoLoaderUnloaded";
 import VideoLoaderLoaded from "./VideoLoaderLoaded";
-
 const VideoLoader = () => {
   const theme = useTheme();
   const id = useId();

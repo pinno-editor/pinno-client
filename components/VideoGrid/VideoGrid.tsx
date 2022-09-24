@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Container, Grid } from "@mui/material";
 import VideoItem from "../VideoItem/VideoItem";
 import { Video } from "../../common/video";
+import VideoLoader from "../VideoLoader/VideoLoader";
+import styles from "./VideoGrid.module.scss";
 
 const fakeData = true;
 
@@ -19,16 +21,16 @@ const VideoGrid = () => {
         }
     }, [])
 
-
+    if (videos.length == 0) { return <div className={styles.video_loader_wrapper}><VideoLoader></VideoLoader></div>; }
     return (
         <Container maxWidth="lg">
-        <Grid container spacing={1} >
-            {videos.map((video: Video, index) => (
-                <Grid key={index} item sm={4} xs={4} md={4}>
-                    <VideoItem video={video}></VideoItem>
-                </Grid>
-            ))}
-        </Grid>
+            <Grid container spacing={1} >
+                {videos.map((video: Video, index) => (
+                    <Grid key={index} item sm={4} xs={4} md={4}>
+                        <VideoItem video={video}></VideoItem>
+                    </Grid>
+                ))}
+            </Grid>
         </Container>
     )
 }
