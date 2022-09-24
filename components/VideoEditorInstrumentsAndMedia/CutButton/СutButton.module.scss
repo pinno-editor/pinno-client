@@ -1,0 +1,13 @@
+.cut_button{
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    background: #121212;
+    border-radius: 0.5em;
+    text-align: center;
+    color: #000000;
+
+    img {
+        width: 100%;
+    }
+}
