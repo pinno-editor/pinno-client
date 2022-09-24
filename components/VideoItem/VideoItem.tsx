@@ -9,7 +9,7 @@ interface VideoItemProps {
 const VideoItem: FC<VideoItemProps> = ({video}) => {
     return (
         <div className={styles.video_item}>
-             <img src={video.tile} alt="" />
+             <img src={video.tile} alt={video.title} />
         </div>)
 }
 export default VideoItem;
