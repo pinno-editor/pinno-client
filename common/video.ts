@@ -1,5 +1,6 @@
 export interface Video {
     title: string;
     tile: string;
-    content: string;
+    link: string;
+    id: string;
 }
